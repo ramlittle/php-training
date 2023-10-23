@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coffee Mate | For Creamer Fans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style-type: none;
+            background-color: crimson;
+            overflow: hidden;
+        }
+
+        li {
+            float: right;
+            padding: 1rem;
+        }
+
+        li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        li:hover {
+            background-color: burlywood;
+        }
+
+        h1,
+        .second-heading {
+            margin: 1px;
+            border-radius: 1.5rem;
+            text-align: center;
+            font-family: 'Comic Sans MS', sans-serif;
+            color: slategray;
+        }
+        .main{
+            padding:1rem;
+        }
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-evenly;
+            padding: 1rem;
+        }
+
+        .boxes {
+            border: 0.25px solid cornsilk;
+            margin: 1rem;
+            border-radius: 1rem;
+            padding: 1rem;
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(100%/4);
+        }
+        .boxes:hover{
+            background-color: cornsilk;
+            
+        }
+        .boxes  img:hover{
+            filter:grayscale(0%);
+        }
+
+        .boxes>div {
+            text-align: center;
+        }
+
+        .boxes img {
+            width: 15rem;
+            height: 15rem;
+            filter:grayscale(50%);
+           
+        }
+        hr{
+            color:lightpink;
+        }
+        .table-container{
+            display:flex;
+            justify-content:center;
+            width:60%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        table{
+            width: 100%;
+        }
+        table tr,td {
+            padding:1rem;
+            text-align:center;
+            font-size: medium;  
+        }
+        table tr:nth-child(even){
+            background-color: lightpink;
+        }
+        table thead{
+            background-color: crimson;
+            color:white;
+        }
+        table tr:hover{
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Home</a></li>
+    </ul>
+
+    <div class="main">
+        <h1>Creamers</h1>
+        <hr />
+        <div class="box-container">
+            <div class="boxes">
+                <div>
+                    <img src="../images/coffee1.jpg" width="150px" height="150px" alt="Coffee Mate model 1"
+                        title="Coffee Mate model 1" loading="lazy" />
+                </div>
+                <div>
+                    <h2>Original</h2>
+                    <p>Nestle - Nestle Coffee Mate The Original Coffee Creamer, 0.375 oz Pouches (180 count)</p>
+                    <blockquote cite="www.youtube.com">first model block quote</blockquote>
+                </div>
+
+            </div>
+
+
+            <div class="boxes">
+                <div>
+
+                    <img src="../images/coffee2.jpg" alt="Coffee Mate model 2" title="Coffee Mate model 2"
+                        loading="lazy" />
+                </div>
+                <div>
+
+                    <h2>Shrink Mate</h2>
+                    <p>Nestlé shrinks Coffee Mate packs by 50g to mitigate soaring costs | News | The Grocer</p>
+                    <blockquote cite="www.youtube.com">second model block quote</blockquote>
+                </div>
+            </div>
+
+            <div class="boxes">
+                <div>
+                    <img src="../images/coffee3.jpg" alt="Coffee Mate model 3" title="Coffee Mate model 3"
+                        loading="lazy" />
+                </div>
+                <div>
+                    <h2>Powdered</h2>
+                    <p>Coffee Mate Powdered Creamer Variety 4 Pk, 1 of each of the following: Original, Hazelnut</p>
+                    <blockquote
+                        cite="https://www.nestleprofessional.ph/sites/default/files/styles/np_product_detail/public/2023-03/CM_3g.png?itok=IvVtN7sz">
+                        third model block quote</blockquote>
+                </div>
+            </div>
+
+            <div class="boxes">
+                <div>
+                    <img src="../images/coffee4.jpg" alt="Coffee Mate model 4" title="Coffee Mate model 4"
+                        loading="lazy" />
+                </div>
+                <div>
+                    <h2>Hazel Nut</h2>
+                    <p>Grab-and-go pack makes Nestlé's Coffee-mate 2GO the ultimate portab </p>
+                    <blockquote
+                        cite="https://www.nestleprofessional.ph/sites/default/files/styles/np_product_detail/public/2023-03/CM_3g.png?itok=IvVtN7sz">
+                        third model block quote</blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="second-heading">Product List</h1>
+    <div class="table-container">   
+        <table>
+            <thead>
+                <tr>
+                    <td>Creamer</td>
+                    <td>Description</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Model 1</td>
+                    <td>This is the first Model</td>
+                    <td>P 180</td>
+                </tr>
+                <tr>
+                    <td>Model 2</td>
+                    <td>This is the Second Model</td>
+                    <td>P 80</td>
+                </tr>
+                <tr>
+                    <td>Model 3</td>
+                    <td>This is the Third Model</td>
+                    <td>P 100</td>
+                </tr>
+            </tbody>
+            
+        </table>
+
+    </div>
+    
+</body>
+
+</html>

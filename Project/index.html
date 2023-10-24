@@ -19,6 +19,25 @@
         .custom-font {
             font-family: "Comic Sans MS";
         }
+
+        #game-container {
+            background-image: url('./images/farmfield.jpg')
+        }
+
+        #scoreboard {
+            height: 5rem;
+        }
+        #angry-dog-container > img:nth-child(1){
+            width:15rem;
+            height:15rem;
+        }
+        #angry-dog-container > img:nth-child(2){
+            width:10rem;
+            height:10rem;
+        }
+        #win-container img,#lost-container img{
+            height:400px;
+        }
     </style>
     <title>Dogs Vs Chickens</title>
 </head>
@@ -207,14 +226,108 @@
         </div>
         <!-- SECOND -->
         <!-- A -->
-        <div  id ="play-button-container" class="row bg-dark vh-100">
+        <div id="play-button-container" class="row bg-dark vh-100">
             <div class="d-flex justify-content-center align-items-center p-2 ">
-                <button id = "play-button" type="button" class="btn btn-outline-warning fs-1 fs-bold col-3">Play</button>
+                <button id="play-button" type="button" class="btn btn-outline-warning fs-1 fs-bold col-3">Play</button>
             </div>
         </div>
         <!-- B -->
-        <div id="game-container" class="row vh-100">
-            <iframe src="https://eggwrecker.vercel.app/" width="800" height="600" frameborder="0"></iframe>
+        <div id="game-container" class="row">
+            <!-- <iframe src="https://eggwrecker.vercel.app/" width="800" height="600" frameborder="0"></iframe> -->
+
+            <!-- Status and Scoring -->
+            <div id="scoreboard" class="row border border-warning fs-2 text-white bg-dark">
+                <div class="col">
+                    <span>Bullets Left: </span>
+                    <span id="bullet-container"></span>
+                </div>
+                <div class="col">
+                    <span>Eggs Left: </span>
+                    <span id="eggs-container"></span>
+                </div>
+                <div class="col">
+                    <span>Score: </span>
+                    <span id="score-container">0</span>
+                </div>
+                <div class="col">
+                    <span>Status: </span>
+                    <span id="status-container">Select Coordinates</span>
+                </div>
+            </div>
+
+            <div id ="gameplay"class="row">
+                <div class='col-6 d-flex justify-content-center align-items-center p-2 border'>
+                    <!-- doggies -->
+                    <div class="col-12">
+                        <div class="row m-2">
+                            <div class="row">
+                                <div class="col">
+                                    <button id="button-1x1"class="btn btn-warning m-1 fs-4">1 X 1</button>
+                                    <button id="button-1x2" class="btn btn-warning m-1 fs-4">1 X 2</button>
+                                    <button id="button-1x3"class="btn btn-warning m-1 fs-4">1 X 3</button>
+                                    <button id="button-1x4"class="btn btn-warning m-1 fs-4">1 X 4</button>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col">
+                                    <button id="button-2x1"class="btn btn-warning m-1 fs-4">2 X 1</button>
+                                    <button id="button-2x2"class="btn btn-warning m-1 fs-4">2 X 2</button>
+                                    <button id="button-2x3" class="btn btn-warning m-1 fs-4">2 X 3</button>
+                                    <button id="button-2x4"class="btn btn-warning m-1 fs-4">2 X 4</button>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col">
+                                    <button id="button-3x1"class="btn btn-warning m-1 fs-4">3 X 1</button>
+                                    <button id="button-3x2"class="btn btn-warning m-1 fs-4">3 X 2</button>
+                                    <button id="button-3x3"class="btn btn-warning m-1 fs-4">3 X 3</button>
+                                    <button id="button-3x4"class="btn btn-warning m-1 fs-4">3 X 4</button>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col">
+                                    <button id="button-4x1"class="btn btn-warning m-1 fs-4">4 X 1</button>
+                                    <button id="button-4x2"class="btn btn-warning m-1 fs-4">4 X 2</button>
+                                    <button id="button-4x3"class="btn btn-warning m-1 fs-4">4 X 3</button>
+                                    <button id="button-4x4"class="btn btn-warning m-1 fs-4">4 X 4</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id ="angry-dog-container"class="col">
+                                    <img src="./images/angrydog.png"/>
+                                    <img src="./images/bullet.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- chicken eggs -->
+                <div class='col-6 border'>
+                    <div class = "row">
+                        <div id="happy-chicken-container" class="col">
+                            <img src='./images/chickendance.gif'/>
+                        </div>
+                        <div id="sad-chicken-container"class="col">
+                            <img src='./images/chickendismayed.gif'/>
+                        </div>
+                        <div id="craters"class="col">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+        </div>
+        <div id="win-container" class ="row">
+            <img src="./images/win.png"/>
+        </div>
+        <div id="lost-container"class ="row">
+            <img src="./images/lost.png"/>
         </div>
         <!-- THIRD -->
         <div class="row vh-100 d-flex justify-content-center align-items-center">
@@ -224,7 +337,7 @@
             <div class="row fs-2 col-6">
                 <p>Preface:
                     There are two sides in this game. You play as the dog.
-                    You as the dog will destroy the eggs hidden by the chickens in a 4x4 field</p>
+                    You as the dog must guest which coordinates the chickens have hidden the eggs in a 4x4 field</p>
                 <ol>
                     <li>Press the coordinates you want to target</li>
                     <li>Press launch button</li>

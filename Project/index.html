@@ -6,39 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-        .carousel>.carousel-inner>.carousel-item {
-            height: 400px;
-        }
-
-        .carousel>.carousel-inner>.carousel-item {
-            height: 100vh;
-            width: 100%;
-        }
-
-        .custom-font {
-            font-family: "Comic Sans MS";
-        }
-
-        #game-container {
-            background-image: url('./images/farmfield.jpg')
-        }
-
-        #scoreboard {
-            height: 5rem;
-        }
-        #angry-dog-container > img:nth-child(1){
-            width:15rem;
-            height:15rem;
-        }
-        #angry-dog-container > img:nth-child(2){
-            width:10rem;
-            height:10rem;
-        }
-        #win-container img,#lost-container img{
-            height:400px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
     <title>Dogs Vs Chickens</title>
 </head>
 
@@ -199,16 +167,13 @@
                         aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/dogchickenhero.png" class="d-block w-100 " alt="..." loading="lazy">
+                    </div>
                     <div class="carousel-item ">
                         <img src="./images/chickens.jpg" class="d-block w-100" alt="..." loading="lazy">
                     </div>
-                    <div class="carousel-item">
-                        <img src="./images/dogchickenhero.png" class="d-block w-100" alt="..." loading="lazy">
-                        <div class="carousel-caption d-none d-md-block text-dark">
-                            <h5>Are you here to break my eggs?</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item active">
+                    <div class="carousel-item ">
                         <img src="./images/dogs.jpg" class="d-block w-100" alt="..." loading="lazy">
                     </div>
                 </div>
@@ -233,8 +198,6 @@
         </div>
         <!-- B -->
         <div id="game-container" class="row">
-            <!-- <iframe src="https://eggwrecker.vercel.app/" width="800" height="600" frameborder="0"></iframe> -->
-
             <!-- Status and Scoring -->
             <div id="scoreboard" class="row border border-warning fs-2 text-white bg-dark">
                 <div class="col">
@@ -320,14 +283,17 @@
                     </div>
                 </div>
             </div>
-           
-
         </div>
         <div id="win-container" class ="row">
             <img src="./images/win.png"/>
         </div>
         <div id="lost-container"class ="row">
             <img src="./images/lost.png"/>
+        </div>
+        <div class="row">
+            <div class="col bg-warning p-2 rounded text-center">
+                <a class="text-white" href="https://eggwrecker.vercel.app/" target="_blank">Play Online</a>
+            </div>
         </div>
         <!-- THIRD -->
         <div class="row vh-100 d-flex justify-content-center align-items-center">

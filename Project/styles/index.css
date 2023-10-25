@@ -1,0 +1,31 @@
+.carousel>.carousel-inner>.carousel-item {
+    height: 400px;
+}
+
+.carousel>.carousel-inner>.carousel-item {
+    height: 100vh;
+    width: 100%;
+}
+
+.custom-font {
+    font-family: "Comic Sans MS";
+}
+
+#game-container {
+    background-image: url('../images/farmfield.jpg')
+}
+
+#scoreboard {
+    height: 5rem;
+}
+#angry-dog-container > img:nth-child(1){
+    width:15rem;
+    height:15rem;
+}
+#angry-dog-container > img:nth-child(2){
+    width:10rem;
+    height:10rem;
+}
+#win-container img,#lost-container img{
+    height:400px;
+}

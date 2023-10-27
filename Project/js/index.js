@@ -192,7 +192,7 @@ function setBullets() {
         }
     }
     eggs = bullets;
-    bullets+=2;
+    bullets+=7;
     eggsContainer.textContent = eggs;
 }
 
